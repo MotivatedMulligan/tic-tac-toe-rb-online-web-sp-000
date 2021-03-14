@@ -51,7 +51,7 @@ def play(board)
     if won?(board)
       puts "Congratulations #{winner(board)}!"
     elsif draw?(board)
-      puts "Cat's Game!"
+      puts "It's a draw"
     end
   else
     turn(board)
@@ -70,13 +70,6 @@ def turn_count(array)
   num_turns
 end
 
-# def current_player(board)
-#   if turn_count(board) % 2 == 0
-#     return "X"
-#   else
-#     return "O"
-#   end
-# end
 
 def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
